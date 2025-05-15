@@ -1,78 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="robots" content="index, follow">
-<meta name="description" content="En esta sección te acompañaremos a conocer los principos básicos de las bases de datos.">
-<meta name="google-site-verification" content="FOCnhDQOQvLs9P3jDfOG126X3Dp-8jSyQ0gVxQ-gSTg" />
-  
-<title> ¿Qué es una base de datos y cómo empezar? </title>
-<style>
-  h1 {
-    color: white;
-    font-family: 'Roboto', sans-serif;
-  }
-  body {
-    background-image: url(https://img.freepik.com/vector-gratis/fondo-poligonal-realista_23-2148902684.jpg);
-    background-size: cover;
-    background-repeat: no repeat;
-    background-position: center;
-  }
-  p {
-     text-align: left;
+  <meta charset="UTF-8" />
+  <meta name="robots" content="index, follow" />
+  <meta name="description" content="En esta sección te acompañaremos a conocer los principios básicos de las bases de datos." />
+  <meta name="google-site-verification" content="FOCnhDQOQvLs9P3jDfOG126X3Dp-8jSyQ0gVxQ-gSTg" />
+  <title>Bases de Datos para Jóvenes Curiosos</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url('https://img.freepik.com/vector-gratis/fondo-poligonal-realista_23-2148902684.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.6);
+      min-height: 100vh;
+      padding: 30px;
+    }
+
+    h1 {
       color: white;
-    font-size: 18px;
-    font-family: "Courier New", serif;
-  }
+      text-align: center;
+      margin-bottom: 20px;
+    }
 
+    .content-box {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 25px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
 
+    .content-box p {
+      color: white;
+      font-size: 18px;
+      font-family: "Courier New", serif;
+      text-align: left;
+    }
 
-  
-</style>
-</head>  
+    .main-img {
+      display: block;
+      margin: 40px auto 20px auto;
+      height: 180px;
+      width: auto;
+      border-radius: 10px;
+    }
+
+    .floating-btn {
+      position: fixed;
+      right: 20px;
+      padding: 15px;
+      border-radius: 50%;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      z-index: 10000;
+    }
+
+    .whatsapp {
+      bottom: 100px;
+      background-color: #25d366;
+      color: white;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .instagram {
+      bottom: 180px;
+      background-color: #C13584;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .instagram svg {
+      width: 30px;
+      height: 30px;
+      fill: white;
+    }
+
+    img[alt="Visit counter For Websites"] {
+      display: block;
+      margin: 20px auto;
+    }
+
+    .moving-title {
+      position: fixed;
+      top: 20px;
+      left: -100%;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 5px;
+      animation: moveTitle 20s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes moveTitle {
+      0% {
+        left: -100%;
+      }
+      50% {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      100% {
+        left: 100%;
+      }
+    }
+  </style>
+</head>
 <body>
- <a href="https://fiec.up.ac.pa/" target="_blank"> <img src="upanama.png" alt="" widht ="150" height = "150" style="float: right;"> </a>
- <a href="https://www.up.ac.pa/" target="_blank"> <img src="1727572129586.png" alt="" widht="150" height = "150"> </a>
-  <center><img src="https://www.piensasolutions.com/blog/file/uploads/2023/06/5-bases-datos.jpg" alt="" widh ="150" height="150"></center>
-  <center><h1> Introducción Básica a Bases de Datos </h1></center>
+  <div class="moving-title">Explora el Mundo de las Bases de Datos – Curso Educativo para Jóvenes</div>
 
-  <!-- hitwebcounter Code START -->
-<a href="https://www.hitwebcounter.com" target="_blank">
-<img src="https://hitwebcounter.com/counter/counter.php?page=20611922&style=0014&nbdigits=6&type=page&initCount=0" title="Counter Widget" Alt="Visit counter For Websites"   border="0" /></a>     
-  
-<p>
-  Las bases de datos son un conjunto de datos ordenados, <br>
-  procesados y almacenados para su fácil localización. <br>
-  Los datos cuando se compilan y se hacen entendibles <br>
-  se vuelven de vital importancia. Pues esto nos permite<br>
-  tomar decisiones.
-<br><br>En este sitio podrás interactuar con nuestro asistente virtual que te guiará y asesorará en tu exploración sobre esta asignatura.
- </p>
+  <div class="overlay">
+    <img src="https://www.piensasolutions.com/blog/file/uploads/2023/06/5-bases-datos.jpg" alt="Base de datos" class="main-img" />
+    <h1>Bases de Datos para Jóvenes Curiosos</h1>
 
-  <a href="https://wa.me/50764222939" target="_blank">
-    <div style="position: fixed; bottom: 220px; right: 20px; background-color: #25d366; color: white; padding: 15px; border-radius: 50%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); font-size: 30px;">
-        💬
+    <!-- Contador -->
+    <a href="https://www.hitwebcounter.com" target="_blank">
+      <img src="https://hitwebcounter.com/counter/counter.php?page=20611922&style=0014&nbdigits=6&type=page&initCount=0" title="Counter Widget" alt="Visit counter For Websites" border="0" />
+    </a>
+
+    <div class="content-box">
+      <p>
+        Las bases de datos son un conjunto de datos ordenados,<br>
+        procesados y almacenados para su fácil localización.<br>
+        Los datos cuando se compilan y se hacen entendibles<br>
+        se vuelven de vital importancia. Pues esto nos permite<br>
+        tomar decisiones.<br><br>
+        En este sitio podrás interactuar con nuestro asistente virtual que te guiará y asesorará en tu exploración sobre esta asignatura.
+      </p>
+      <p style="color: #ccc; font-style: italic; margin-top: 30px; text-align: center;">
+        Presentado por: Juan Aris, Cristian Chavez, Idelka Morris
+      </p>
     </div>
-</a>
+  </div>
 
-<a href="https://www.instagram.com/cristian_507_1504/" target="_blank">
-    <div style="position: fixed; bottom: 310px; right: 20px; background-color: #C13584; color: white; padding: 15px; border-radius: 50%; box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); font-size: 30px;">
-        <img src="580b57fcd9996e24bc43c521.png" 
-             alt="Instagram" 
-             style="width:45px; height:40px;">
-    </div>
-</a>
+  <!-- WhatsApp -->
+  <a href="https://wa.me/50764222939" target="_blank" class="floating-btn whatsapp" title="Contáctanos por WhatsApp">💬</a>
 
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/cristian_507_1504/" target="_blank" class="floating-btn instagram" title="Instagram">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+      <path d="M224 141c-45.9 0-83 37.1-83 83s37.1 83 83 83 83-37.1 83-83-37.1-83-83-83zm0 136c-29.2 0-53-23.8-53-53s23.8-53 53-53 53 23.8 53 53-23.8 53-53 53zm124-144c0 14.3-11.6 26-26 26s-26-11.6-26-26 11.6-26 26-26 26 11.6 26 26zm76.1 27.2c-1.7-35.3-9.9-66.7-36.3-92.1S330.1 32.5 294.8 30.7C259.3 28.9 188.7 28.9 153.2 30.7 117.9 32.5 86.5 40.6 61.1 67s-34.6 56.8-36.3 92.1C22.9 176.7 22.9 247.3 24.7 282.8c1.7 35.3 9.9 66.7 36.3 92.1s56.8 34.6 92.1 36.3c35.5 1.8 106.1 1.8 141.6 0 35.3-1.7 66.7-9.9 92.1-36.3s34.6-56.8 36.3-92.1c1.8-35.5 1.8-106.1 0-141.6zM398.8 338c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.2 9s-102.7 2.6-132.2-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.2s-2.6-102.7 9-132.2c7.8-19.6 22.9-34.7 42.6-42.6C121.3 41.3 191.3 44 224 44s102.7-2.6 132.2 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.2s2.6 102.7-9 132.2z"/>
+    </svg>
+  </a>
 
-
-<script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
-<df-messenger
-  intent="WELCOME"
-  chat-title="Zeus"
-  agent-id="fa5661b2-3b30-4c83-bd35-be1ac74da6c4"
-  language-code="es"
-></df-messenger>
-  
+  <!-- Asistente Dialogflow -->
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Zeus"
+    agent-id="fa5661b2-3b30-4c83-bd35-be1ac74da6c4"
+    language-code="es">
+  </df-messenger>
 </body>
-
 </html>
